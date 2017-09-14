@@ -4,9 +4,23 @@ import java.util.Date;
  * An interface that provide a number of operations for any array of students
  *
  */
-public interface StudentArrayOperation {
-
-	/**
+public interface StudentArrayOperation 
+{
+	Scanner s=new Scanner(System.in);
+   System.out.println("Enter the number of students");
+   int n=s.nextInt();
+   int Student[]=new int[n];
+   System.out.println("enter elements");
+   for(int i=0;i<n;i++)
+   {
+	  Student[i]=nextInt();
+   }
+   for(int i:Student)
+   {
+	   System.out.println(i);
+   }
+   
+   /**
 	 * Returns the array of students
 	 * 
 	 * @return the array of students
@@ -14,8 +28,7 @@ public interface StudentArrayOperation {
 	 */
 	Student[] getStudents();
 	
-
-	/**
+	/** 
 	 * Sets the array of students
 	 * if students == null method should throw IllegalArgumentException
 	 *
@@ -25,6 +38,7 @@ public interface StudentArrayOperation {
 	 */
 	void setStudents(Student[] students);
 	
+	
 
 	/**
 	 * if index lower than 0 or index higher/equal students.length method should
@@ -33,6 +47,36 @@ public interface StudentArrayOperation {
 	 * @param index
 	 */
 	Student getStudent(int index);
+	void Replace()
+	{
+		if((Student==null)&&(Student[i]<0)||(Student[i]>=(Student.length()))
+		{
+			 finally
+			 {
+				 System.out.println("IllegalArgumentException");
+			 }
+		}
+	 else
+		{
+		 index=scan.nextInt();
+		 for(int i=0;i<n;i++)
+		 {
+			 if(Student[i]==index)
+			 {
+			 for(int j=i;j<(n-1);j++)
+			 {
+				 Student[j]=student[j+1];
+		     }
+			 count++;
+			 break;
+		    }
+		 }
+		 if(count==0)
+		 {
+		   System.out.println("element not found");
+	     }
+	   
+	 }
 
 	
 	/**
@@ -50,6 +94,22 @@ public interface StudentArrayOperation {
 	 * @throws IllegalArgumentException
 	 */
 	void setStudent(Student student, int index);
+	 int x,n;
+     System.out.println("enter the element you want to insert:");
+      x=s.nextInt();
+      	for(int i=(n-1);i>=(index-1);i--)
+      		{
+      			student[i+1]=student[i];
+	   
+      		}
+      		student[index-1]=x;
+      		System.out.println("after inserting:");
+      			for(int i=0;i<n;i++)
+      			{
+      				System.out.println(a[i]+",");
+      			}
+System.out.println(a[n]);
+}
 
 	
 	/**
